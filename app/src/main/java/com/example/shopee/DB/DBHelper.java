@@ -24,6 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(User);
         String SanPham = "CREATE TABLE SanPham " +
                 "(maSP INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "maLoaiSP INTEGER NOT NULL, " +
                 "tenSP TEXT NOT NULL, " +
                 "moTa TEXT NOT NULL, " +
                 "giaSP INTEGER NOT NULL, " +
@@ -37,6 +38,11 @@ public class DBHelper extends SQLiteOpenHelper {
                 "tongTien INTEGER NOT NULL, " +
                 "taiKhoan TEXT NOT NULL )";
         sqLiteDatabase.execSQL(PhieuMua);
+        String LoaiSanPham = "CREATE TABLE LoaiSanPham " +
+                "(maLoaiSP INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "tenLoaiSP TEXT NOT NULL )";
+        sqLiteDatabase.execSQL(LoaiSanPham);
+
     }
 
     @Override
