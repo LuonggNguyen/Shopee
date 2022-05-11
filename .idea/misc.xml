@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/border.xml" value="0.17" />
-        <entry key="app/src/main/res/layout/activity_create_accounts.xml" value="0.11666666666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="..\:/Users/Luong Nguyen/Desktop/Shopee/app/src/main/res/drawable/border.xml" value="0.309" />
+        <entry key="..\:/Users/Luong Nguyen/Desktop/Shopee/app/src/main/res/layout/activity_login.xml" value="0.18085106382978725" />
+        <entry key="..\:/Users/Luong Nguyen/Desktop/Shopee/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Luong Nguyen/Desktop/Shopee/app/src/main/res/layout/activity_sign_up.xml" value="0.18085106382978725" />
       </map>
     </option>
   </component>
