@@ -20,7 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "(taiKhoan TEXT PRIMARY KEY , " +
                 "matKhau TEXT NOT NULL, " +
                 "hoTen TEXT NOT NULL, " +
-                "phanQuyen TEXT NOT NULL)";
+                "phanQuyen INTEGER NOT NULL)";
         sqLiteDatabase.execSQL(User);
         String SanPham = "CREATE TABLE SanPham " +
                 "(maSP INTEGER PRIMARY KEY AUTOINCREMENT, " +
