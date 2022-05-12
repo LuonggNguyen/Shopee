@@ -43,6 +43,12 @@ public class DBHelper extends SQLiteOpenHelper {
                 "tenLoaiSP TEXT NOT NULL )";
         sqLiteDatabase.execSQL(LoaiSanPham);
 
+        String INSERT_User = "Insert into User(taiKhoan,matKhau,hoTen, phanQuyen) values " +
+                "('ngan','123','Nguyễn Phúc Ngân', 2)," +
+                "('luong','123','Nguyễn Hoài Lương', 1)," +
+                "('admin','123','Nguyễn Admin', 3)" ;
+        sqLiteDatabase.execSQL(INSERT_User);
+
     }
 
     @Override
