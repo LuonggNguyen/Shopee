@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shopee">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,6 +8,15 @@
         android:roundIcon="@drawable/icon_shopee"
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopee">
+        <activity
+            android:name=".views.NguoiMua.NguoiMuaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.NguoiBan.NguoiBanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Admin.ManagerUserActivity"
+            android:exported="false" />
         <activity
             android:name=".views.LoginActivity"
             android:exported="false" />

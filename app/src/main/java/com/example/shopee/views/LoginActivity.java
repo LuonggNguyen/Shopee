@@ -3,6 +3,7 @@ package com.example.shopee.views;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,9 @@ import android.widget.Toast;
 
 import com.example.shopee.R;
 import com.example.shopee.controllers.DAO.UserDAO;
+import com.example.shopee.views.Admin.ManagerUserActivity;
+import com.example.shopee.views.NguoiBan.NguoiBanActivity;
+import com.example.shopee.views.NguoiMua.NguoiMuaActivity;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edTaiKhoan, edMatKhau;
@@ -42,13 +46,16 @@ public class LoginActivity extends AppCompatActivity {
                 if (userDAO.checkLogin(taiKhoan, matKhau)){
                     //Toast.makeText(getApplicationContext(), "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                     if (userDAO.getUser(taiKhoan).phanQuyen == 1){
-                        Toast.makeText(getApplicationContext(),"Người Mua",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, NguoiMuaActivity.class);
+                        startActivity(intent);
                     }
                     if (userDAO.getUser(taiKhoan).phanQuyen == 2){
-                        Toast.makeText(getApplicationContext(),"Người Bán",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, NguoiBanActivity.class);
+                        startActivity(intent);
                     }
                     if (userDAO.getUser(taiKhoan).phanQuyen == 3){
-                        Toast.makeText(getApplicationContext(),"Admin",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, ManagerUserActivity.class);
+                        startActivity(intent);
                     }
                 }else {
                     Toast.makeText(getApplicationContext(), "Tài khoản hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
